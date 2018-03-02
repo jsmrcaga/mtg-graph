@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MTG Builder</title>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/workshop/1.1.0/workshop.min.js"></script>
+	<script type="text/javascript" src="/lib/vis.js"></script>
+	<style type="text/css">
+		@import url('/lib/vis.css');
+		@import url('/css/main.css');
+	</style>
+</head>
+<body>
+<div class="menu">
+	<div class="filter-menu">
+		<form id="filter">
+			<h2>Filters</h2>
+			<div class="filter-color">
+				<span class="title">Color</span>
+				<div class="group">
+					<!-- r/g/b/u/w -->
+					<label>
+						<input type="checkbox" id="color-blue">
+						<img src="/img/mana/u.svg">
+					</label>
+					<label>
+						<input type="checkbox" id="color-red">
+						<img src="/img/mana/r.svg">
+					</label>
+					<label>
+						<input type="checkbox" id="color-green">
+						<img src="/img/mana/g.svg">
+					</label>
+					<label>
+						<input type="checkbox" id="color-black">
+						<img src="/img/mana/b.svg">
+					</label>
+					<label>
+						<input type="checkbox" id="color-white">
+						<img src="/img/mana/w.svg">
+					</label>
+
+					<label>
+						<input type="checkbox" id="color-and">
+						AND
+					</label>
+				</div>
+			</div>
+
+			<div class="filter-type">
+				<span class="title">Types</span><br>
+				<select multiple id="filter-type"></select><br>
+				<label>
+					<input type="checkbox" id="type-and">
+					AND
+				</label>
+			</div>
+
+			<div class="filter-cmc">
+				<span class="title">CMC</span><br>
+				<input type="number" id="cmc" min="0">
+				<label>
+					<input type="checkbox" id="cmc-gt">
+					Greater Than
+				</label>
+			</div>
+
+			<div class="filter-properties">
+				<span class="title">Properties</span><br>
+				<select multiple id="filter-properties"></select><br>
+				<label>
+					<input type="checkbox" id="properties-and">
+					AND
+				</label>
+			</div>
+
+			<div class="filter-legalities">
+				<span class="title">Legalities</span><br>
+				<select id="filter-legalities">
+					<option selected value="">Any</option>
+				</select>
+			</div>
+
+			<div class="filter-sets">
+				<span class="title">Sets</span><br>
+				<select multiple id="filter-sets"></select>
+			</div>
+			<input type="submit" value="Filter!">
+		</form>
+
+		<div class="settings">
+			<h2>Settings</h2>
+			<label>
+				<input type="checkbox" id="show-mana">
+				Show Mana Cost
+			</label>
+		</div>
+	</div>
+</div>
+<div class="container">
+	
+</div>
+<script type="text/javascript" src="/js/ui.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+	{
+		"name": "life_gain",
+		"reg": {
+			"does": "gain( \\d)? life",
+			"needs": "gained life"
+		}
+	},
+	{
+		"name": "token_gen",
+		"reg": {
+			"does": "create(s?)( a)?( .+)? token(s?)",
+			"needs": ["would create one or more tokens", "whenever a( .+)? token enters the battlefield under your control"]
+		}
+	},
+	{
+		"name": "enters_battlefield",
+		"reg": {
+			"needs": "when( .+) enters the battlefield",
+			"does": null
+		}
+	}
+]
